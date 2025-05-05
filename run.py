@@ -1,7 +1,7 @@
 import uvicorn
 import os
 import socket
-from init_db import init_db
+
 
 def get_ip_address():
     """Get the local IP address of the machine."""
@@ -17,20 +17,19 @@ def get_ip_address():
         print(f"Error getting IP address: {e}")
         return "127.0.0.1"  # Return localhost if there's an error
 
+
 if __name__ == "__main__":
     # Create static/images directory if it doesn't exist
     os.makedirs("app/static/images", exist_ok=True)
 
-    # Initialize database with sample data
-    init_db()
+    # Check for force reset flag
 
     # Get the IP address
     ip_address = get_ip_address()
 
     # Display access information
     print("\n" + "=" * 50)
-    print(f"Tabble app is running!")
-    print(f"Access locally at: http://localhost:8000")
+
     print(f"Access from other devices at: http://{ip_address}:8000")
     print("=" * 50 + "\n")
 

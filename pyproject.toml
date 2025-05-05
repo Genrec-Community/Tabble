@@ -1,0 +1,16 @@
+[project]
+name = "tabble-v2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.104.1",
+    "firebase-admin>=6.8.0",
+    "jinja2==3.1.2",
+    "python-dotenv==1.0.0",
+    "python-multipart==0.0.6",
+    "reportlab>=4.4.0",
+    "sqlalchemy==2.0.27",
+    "uvicorn==0.23.2",
+]
